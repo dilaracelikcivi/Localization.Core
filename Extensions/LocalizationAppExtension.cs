@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Localization.Routing;
 
 namespace Localization.Core.Extensions
 {
@@ -12,7 +13,10 @@ namespace Localization.Core.Extensions
                 .SetDefaultCulture(supportedCultures[0])
                 .AddSupportedCultures(supportedCultures)
                 .AddSupportedUICultures(supportedCultures);
-
+            
+            var requestProvider = new RouteDataRequestCultureProvider();
+            localizationOptions.RequestCultureProviders.Insert(0, requestProvider);
+            
             app.UseRequestLocalization(localizationOptions);
         }
     }
