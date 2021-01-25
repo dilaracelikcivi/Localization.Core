@@ -5,17 +5,22 @@
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
 @{
+    // get selected culture
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+
+    // get all supported cultures
     var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
-        .ToList();
+        .Select(a => new SelectListItem {Value = a.Name, Text = a.DisplayName}).ToList();
+
+    // specify path by request path value
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 
-<div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
-    <form id="selectLanguage" asp-controller="Home" asp-action="SetCulture" asp-route-returnUrl="@returnUrl" method="post" 
-          class="form-horizontal form-inline" role="form">
-         <select name="culture" onchange="this.form.submit();" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
-        </select>
-    </form>
-</div>
+<form method="post" asp-controller="Home" asp-action="SetCulture" asp-route-returnUrl="@returnUrl">
+    
+    <select name="culture" class="form-control" onchange="this.form.submit();" 
+            asp-for="@requestCulture.RequestCulture.UICulture.Name" 
+            asp-items="cultureItems">
+    </select>
+    
+</form>
