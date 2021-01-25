@@ -1,3 +1,4 @@
+using Localization.Core.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -48,14 +49,7 @@ namespace Localization.Core
 
             app.UseAuthorization();
 
-            var supportedCultures = new[] { "en-US", "tr-TR", "ar", "az"};
-            
-            var localizationOptions = new RequestLocalizationOptions()
-                .SetDefaultCulture(supportedCultures[0])
-                .AddSupportedCultures(supportedCultures)
-                .AddSupportedUICultures(supportedCultures);
-
-            app.UseRequestLocalization(localizationOptions);
+            app.UseLocalization();
             
             app.UseEndpoints(endpoints =>
             {
