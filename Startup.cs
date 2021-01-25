@@ -57,7 +57,7 @@ namespace Localization.Core
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{culture=en-US}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
