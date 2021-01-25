@@ -18,13 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Welcome" xml:space="preserve">
-        <value>Hoşgeldiniz</value>
+    <data name="Home" xml:space="preserve">
+        <value>Anasayfa</value>
     </data>
-    <data name="Learn about building Web apps with ASP.NET Core." xml:space="preserve">
-        <value>ASP.NET Core ile Web uygulamaları oluşturma hakkında bilgi edinin.</value>
-    </data>
-    <data name="Learn about &lt;a href=&quot;https://docs.microsoft.com/aspnet/core&quot;&gt;building Web apps with ASP.NET Core&lt;/a&gt;" xml:space="preserve">
-        <value>&lt;a href="https://docs.microsoft.com/aspnet/core"&gt;ASP.NET Core ile Web uygulamaları&lt;/a&gt; oluşturma hakkında bilgi edinin.</value>
+    <data name="Privacy" xml:space="preserve">
+        <value>Gizlilik</value>
     </data>
 </root>
