@@ -14,6 +14,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Index.tr-TR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\SharedResource.tr-TR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResource.tr-TR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
