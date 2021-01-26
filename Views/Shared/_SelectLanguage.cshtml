@@ -10,7 +10,8 @@
 
     // get all supported cultures
     var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(a => new SelectListItem {Value = a.Name, Text = a.DisplayName}).ToList();
+        .Select(a => new SelectListItem {Value = a.Name, Text = a.DisplayName}).ToList(); 
+    // text değerine native name yazarsak kendi diline ait isimlendirmeler çıkar.
 
     // specify path by request path value
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
