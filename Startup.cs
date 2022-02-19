@@ -21,8 +21,6 @@ namespace Localization.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddLocalizationService();
-            
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddControllersWithViews()
                     .AddDataAnnotationsLocalization()

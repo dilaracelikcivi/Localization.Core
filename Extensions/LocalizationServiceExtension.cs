@@ -23,6 +23,8 @@ namespace Localization.Core.Extensions
                 options.SupportedUICultures = cultures;
                 options.DefaultRequestCulture = new RequestCulture("en-US");
             });
+            
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
         }
     }
 }
