@@ -21,7 +21,4 @@
     <data name="Learn about building Web apps with ASP.NET Core" xml:space="preserve">
         <value>Learn about &lt;a href="{0}"&gt;building Web apps with ASP.NET Core&lt;/a&gt;</value>
     </data>
-    <data name="Welcome" xml:space="preserve">
-        <value>Welcome</value>
-    </data>
 </root>
