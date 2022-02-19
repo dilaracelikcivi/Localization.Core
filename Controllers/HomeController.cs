@@ -13,16 +13,20 @@ namespace Localization.Core.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IStringLocalizer<HomeController> _localizer;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
 
-        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> localizer)
+        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> localizer, 
+            IStringLocalizer<SharedResource> sharedLocalizer)
         {
             _logger = logger;
             _localizer = localizer;
+            _sharedLocalizer = sharedLocalizer;
         }
 
         public IActionResult Index()
         {
             ViewData["Title"] = _localizer["Welcome {0}", "Dilara"];
+            ViewData["Hello"] = _sharedLocalizer["Hello World!"];
             return View();
         }
 
