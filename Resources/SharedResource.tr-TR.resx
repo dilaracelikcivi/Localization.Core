@@ -21,4 +21,7 @@
     <data name="This is a common text." xml:space="preserve">
         <value>Bu ortak bir metindir.</value>
     </data>
+    <data name="Hello World!" xml:space="preserve">
+        <value>Merhaba Dünya!</value>
+    </data>
 </root>

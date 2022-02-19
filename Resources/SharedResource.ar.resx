@@ -21,4 +21,7 @@
     <data name="This is a common text." xml:space="preserve">
         <value>هذا نص شائع.</value>
     </data>
+    <data name="Hello World!" xml:space="preserve">
+        <value>مرحبا بالعالم!</value>
+    </data>
 </root>
